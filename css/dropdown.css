@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 1.5em;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+.logo img {
+  width: 24em;
+  max-width: 100%;
+  padding: 0.625em;
+}
+
+/* Menu de navegação */
+ul.nav-list {
+  padding: 0em;
+  display: flex;
+  gap: 2.5em;
+  margin: 1.25em 2.5em;
+  list-style: none;
+}
+
+/* Estilo dos links */
+ul.nav-list li a {
+  text-decoration: none;
+  color: #990000;
+  font-size: 1.25em;
+  font-weight: 500;
+  transition: color 0.2s ease-out;
+}
+
+ul.nav-list li a:hover {
+  color: #690000;
+}
+
+/* campo de busca */
+.search {
+  position: relative;
+}
+
+.icon-search {
+  position: absolute;
+  pointer-events: none;
+  top: 45%;
+  transform: translateY(-50%);
+  left: 0.2em;
+  color: #200b0b;
+}
+
+.search input {
+  background-color: #990000;
+  border: 0.2em solid #490000;
+  border-radius: 1.25em;
+  width: 18.75em;
+  height: 2em;
+  padding-left: 2em;
+  transition: background-color 0.2s ease-out;
+  outline: none;
+}
+
+input::placeholder {
+  color: #490000;
+  font-size: 1em;
+  font-style: italic;
+}
+
+.search input:hover {
+  background-color: #830000;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #0f0606;
+  min-width: 7em;
+  padding: 0em;
+  z-index: 1;
+  border-radius: 0.7em;
+}
+
+.dropdown-content li {
+  list-style: none;
+}
+
+.dropdown-content li a {
+  display: block;
+  padding: 0.75em 0;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.2s ease-out;
+  color: #490000;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+/* fim do header */
+
+/* Conteúdo principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5em;
+}
+
+/* notícias */
+.noticias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: -2em;
+}
+
+.nots {
+  flex: 1 1 calc(33% - 1.5em);
+}
+
+.nots a {
+  text-decoration: none;
+  text-align: center;
+  color: #990000;
+  display: block;
+}
+
+.nots img {
+  max-width: 100%;
+  aspect-ratio: 10/6;
+  height: 13em;
+  object-fit: cover;
+  border-radius: 1em;
+  margin: 2em 1em 1.2em 1em;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.nots h3 {
+  margin: -0.5em;
+  font-size: 1.3em;
+  max-width: 100%;
+}
+
+.nots img:hover {
+  transform: scale(1.03);
+  filter: brightness(1.1);
+}
+
+.noticias :hover {
+  color: #640000;
+  transition: color 0.2s ease-out;
+}
